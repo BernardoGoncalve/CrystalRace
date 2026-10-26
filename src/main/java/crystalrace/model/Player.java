@@ -35,4 +35,9 @@ public class Player {
     public int getPosition() {
         return position;
     }
+
+    // Method responsável por atualizar a posição do jogador
+    void moveTo(int position) {
+        this.position = position;
+    }
 }
