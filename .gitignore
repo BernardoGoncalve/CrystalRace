@@ -37,3 +37,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+# Java e ficheiros temporários
+*.class
+*.log
+*.tmp

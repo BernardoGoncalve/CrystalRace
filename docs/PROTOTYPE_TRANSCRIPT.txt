@@ -1,0 +1,20 @@
+CRYSTAL RACE — protótipo de movimento de outubro
+Sem efeitos especiais e sem modos de dado interativos nesta versão.
+[01] [02] [03] [04] [05] [06] [07] [08] [09] [10] 
+[11] [12] [13] [14] [15] [16] [17] [18] [19] [20] 
+[21] [22] [23] [24] [25] [26] [27] [28] [29] [30] 
+Jogador 1=1 | Jogador 2=1 | Jogador 3=1
+Jogada 1 | Jogador 1 | dado 3 | casa 1 -> 4
+Jogador 1=4 | Jogador 2=1 | Jogador 3=1
+Jogada 2 | Jogador 2 | dado 2 | casa 1 -> 3
+Jogador 1=4 | Jogador 2=3 | Jogador 3=1
+Jogada 3 | Jogador 3 | dado 6 | casa 1 -> 7
+Jogador 1=4 | Jogador 2=3 | Jogador 3=7
+Jogada 4 | Jogador 1 | dado 4 | casa 4 -> 8
+Jogador 1=8 | Jogador 2=3 | Jogador 3=7
+Jogada 5 | Jogador 2 | dado 1 | casa 3 -> 4
+Jogador 1=8 | Jogador 2=4 | Jogador 3=7
+Jogada 6 | Jogador 3 | dado 2 | casa 7 -> 9
+Jogador 1=8 | Jogador 2=4 | Jogador 3=9
+Próximo jogador: Jogador 1
+Fim da demonstração; a partida ainda está em curso.

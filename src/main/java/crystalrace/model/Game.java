@@ -4,75 +4,111 @@
  * Collaborator/reviewer and contribution: Bernardo Gonçalves.
  * AI assistance: Codex - implementation assistance; see AI_USE.md.
  */
-
 package crystalrace.model;
 
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * Protótipo de outubro: movimentos normais, sem efeitos especiais ou interface.
+ * Integração e métodos de jogada assistidos por Codex; revisão humana pendente.
+ */
 public class Game {
-    // Variável responsável por o número máximo de turnos
     public static final int MAX_TURNS = 100;
-    //Criação de uma lista do tipo Players
+
     private final List<Player> players;
-    private Board board;
-    /* Index 0 - Primeiro Jogador
-    * Index 1 - Segundo Jogador
-    * Index 2 - Terceiro Jogador
-    * Index 3 - Quarto Jogador
-    */
+    private final Board board = new Board();
     private int currentIndex;
-    // Variável responsável para terminar o jogo caso chegue aos 100;
     private int turnCount;
     private boolean finished;
 
     public Game(List<String> names) {
         if (names == null || names.size() < 2 || names.size() > 4) {
-            throw new IllegalArgumentException("Escolha entre 2 a 4 jogadores.");
+            throw new IllegalArgumentException("Escolha entre 2 e 4 jogadores.");
         }
-        //Criação de players por cada nome
         players = names.stream().map(Player::new).toList();
-        if (players.stream().map(p -> p.getName().toLowerCase(Locale.ROOT)).distinct().count() != players.size()) {
-            throw new IllegalArgumentException("Os nomes dos players devem de ser diferentes");
+        long uniqueNames = players.stream()
+                .map(player -> player.getName().toLowerCase(Locale.ROOT))
+                .distinct()
+                .count();
+        if (uniqueNames != players.size()) {
+            throw new IllegalArgumentException("Os nomes dos jogadores devem ser diferentes.");
         }
     }
 
-    // Responsável pelo retorno do Tabuleiro
     public Board getBoard() {
         return board;
     }
 
-    // Responsável pelo retorno da lista de Players
     public List<Player> getPlayers() {
         return players;
     }
 
-    // Responsável pelo retorno do player
     public Player getCurrentPlayer() {
         return players.get(currentIndex);
     }
 
-    // Responsável pelo retorno do número de turnos já realizados
     public int getTurnCount() {
         return turnCount;
     }
 
-    // Responsável por finalizar o jogo.
     public boolean isFinished() {
         return finished;
     }
 
-    // Responsável por verificar se o jogo já terminou
-    private void ensureActive() {
-        if (finished) throw new IllegalArgumentException("O jogo já terminou.");
+    /**
+     * Executa um movimento normal. O valor é fornecido pelo chamador;
+     * entrada manual e aleatoriedade serão ligadas numa etapa posterior.
+     */
+    public TurnResult play(int diceValue) {
+        ensureActive();
+        if (diceValue < 1 || diceValue > 6) {
+            throw new IllegalArgumentException("O dado deve estar entre 1 e 6.");
+        }
+
+        Player player = getCurrentPlayer();
+        int previousPosition = player.getPosition();
+        int candidatePosition = previousPosition + diceValue;
+        if (board.isValidPosition(candidatePosition)) {
+            player.moveTo(candidatePosition);
+        }
+        // Uma ultrapassagem mantém a posição, mas consome a jogada.
+        turnCount++;
+        finished = player.getPosition() == board.getTotalCells()
+                || turnCount >= MAX_TURNS;
+
+        TurnResult result = new TurnResult(player.getName(), diceValue,
+                previousPosition, player.getPosition(), turnCount, finished);
+        if (!finished) {
+            currentIndex = (currentIndex + 1) % players.size();
+        }
+        return result;
     }
 
-    // Responsável por realizar o restart do jogo, atribuir a casa nº 1 a todos os jogadores
+    /** Devolve os líderes apenas após o fim; vários líderes representam empate. */
+    public List<Player> getWinners() {
+        if (!finished) {
+            return List.of();
+        }
+        int bestPosition = players.stream()
+                .mapToInt(Player::getPosition)
+                .max()
+                .orElseThrow();
+        return players.stream()
+                .filter(player -> player.getPosition() == bestPosition)
+                .toList();
+    }
+
+    private void ensureActive() {
+        if (finished) {
+            throw new IllegalStateException("O jogo já terminou.");
+        }
+    }
+
     public void restart() {
-        players.forEach(p -> p.moveTo(1));
+        players.forEach(player -> player.moveTo(1));
         currentIndex = 0;
         turnCount = 0;
         finished = false;
     }
-
 }

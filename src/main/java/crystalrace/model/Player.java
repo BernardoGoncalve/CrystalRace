@@ -7,8 +7,8 @@
 package crystalrace.model;
 
 /**
- * Representa um participante. Nesta etapa, permite apenas criar e consultar
- * o jogador; as alterações de posição serão tratadas numa etapa posterior.
+ * Representa um participante. Game coordena os movimentos; moveTo tem acesso
+ * de package para impedir alterações diretas pela futura interface.
  */
 public class Player {
     private final String name;
@@ -39,7 +39,9 @@ public class Player {
 
     // Responsável por atualizar a posição do jogador
     void moveTo(int position) {
-        if (position < 1) throw new IllegalArgumentException("Invalid move position.");
+        if (position < 1) {
+            throw new IllegalArgumentException("A posição deve ser igual ou superior a 1.");
+        }
         this.position = position;
     }
 

@@ -32,3 +32,16 @@ Conceitos: encapsulamento através de atributos privados; construtor para garant
 Não foram implementadas Board, Game ou interface gráfica. Main e pom.xml foram preservados. Contribuições e revisão efetiva dos alunos: Bernardo Gonçalves.
 
 Validação efetivamente executada por Codex: `mvn -o clean compile` com Java 21, BUILD SUCCESS (dois ficheiros de produção). Verificação programática temporária, executada com Java 21: nome válido, posição inicial 1, remoção de espaços exteriores, rejeição de null, vazio e espaços em branco, e criação de dois jogadores com nomes independentes. Resultado: PLAYER_CHECK_OK. O ficheiro auxiliar foi criado em target/ e removido após a execução. Não foram adicionados ou executados testes JUnit, nem atribuídas estas verificações a alunos. Não foram criados commits ou tags.
+
+## Etapa 3 — Integração e protótipo de movimento de outubro
+**Ferramenta:** Codex. **Pedido resumido:** integrar as classes existentes, implementar apenas a movimentação inicial e preparar os elementos do checkpoint de 29 de outubro, sem recorrer ao backup nem criar commits/tags. O utilizador confirmou que o docente aprovou o grupo de três e que ainda não existia divisão de tarefas.
+
+**Saída retida:** integração de Board em Game; play(int), resultado de jogada, alternância, contador, fronteiras, fim e líderes; record TurnResult; Main com demonstração predefinida; testes GameTest; configuração JUnit/Surefire/JAR no pom; documentação das regras, mapa, UML, GUI, representações, tarefas propostas, casos de teste, validação, relatório e checklist.
+
+**Alterações ao código existente:** preservados nomes, packages e responsabilidades; corrigido texto de Player, removido import não utilizado de Board; revisto o propósito do cabeçalho de AdvanceCell; adicionado cabeçalho de NormalCell com contribuição humana por confirmar. Cabeçalhos existentes identificavam Bernardo; isso não atribui automaticamente os métodos agora gerados por IA ao aluno. A integração e os testes novos têm revisão humana pendente. Não foram adicionados efeitos ao movimento, modos de dado interativos ou GUI.
+
+**Verificação efetiva:** Maven com Java 21, clean test package, BUILD SUCCESS; 24 testes sem falhas, erros ou ignorados. JAR executado com seis lançamentos e posições finais verificadas (8,4,9). Evidências em docs/VALIDATION.md e docs/PROTOTYPE_TRANSCRIPT.txt. A primeira captura da saída encontrou encoding diferente no Windows; repetida com UTF-8 explícito. Verificados cabeçalhos e coerência de packages.
+
+**Organização humana:** docs/TASK_ALLOCATION.md é uma proposta, não distribuição acordada nem contribuição concluída. Os três devem aprová-la ou corrigi-la. Contribuições, revisões e reflexões pessoais devem ser preenchidas pelos próprios. Não se afirmam testes realizados pelos alunos ou acesso do docente ao GitHub. A aprovação do grupo é registada com base na confirmação do utilizador.
+
+**Fontes e ativos:** o guião fornecido pelo utilizador e o código existente na pasta oficial. Não foi lida ou utilizada a pasta de backup. Não foram usados ativos externos nem gerada arte nesta etapa. JUnit e os plugins Maven constam do pom e são dependências de ferramentas, não código de alunos. Não foram criados commits/tags, feito push ou submetido o Moodle.

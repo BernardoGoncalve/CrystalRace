@@ -6,7 +6,6 @@
  */
 package crystalrace.model;
 
-import java.util.stream.IntStream;
 
 public class Board {
     private final int totalCells = 30;

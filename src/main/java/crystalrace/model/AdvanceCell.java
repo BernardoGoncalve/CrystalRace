@@ -1,5 +1,5 @@
 /*
- * Module and purpose: Representar os limites do tabuleiro.
+ * Module and purpose: Representar uma casa de avanço.
  * Student name/number and implemented contributions: Bernardo Gonçalves.
  * Collaborator/reviewer and contribution: Bernardo Gonçalves.
  * AI assistance: Codex - implementation assistance; see AI_USE.md.
