@@ -1,0 +1,9 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: crystalrace.SimplifyBasePackage
+displayName: Simplify Crystal Race base package
+description: Rename the initial Java package and update source paths.
+recipeList:
+  - org.openrewrite.java.ChangePackage:
+      oldPackageName: pt.ual.crystalRace
+      newPackageName: crystalrace
+      recursive: true
