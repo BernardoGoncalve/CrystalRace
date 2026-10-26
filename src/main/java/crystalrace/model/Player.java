@@ -18,7 +18,7 @@ public class Player {
     public Player(String name) {
         // Verificação responsável pelo nome do jogador
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("O nome do jogador não pode estar vazio.");
+            throw new IllegalArgumentException("O nome do jogador é obrigatório.");
         }
 
         // Responsável por retirar os espaços em branco do nome introduzido pelo utilizador
@@ -27,17 +27,20 @@ public class Player {
         this.position = 1;
     }
 
-    public String getName()
-    {
+    // Responsável por retornar o nome do player
+    public String getName() {
         return name;
     }
 
+    // Responsável por retornar a posição do Player
     public int getPosition() {
         return position;
     }
 
-    // Method responsável por atualizar a posição do jogador
+    // Responsável por atualizar a posição do jogador
     void moveTo(int position) {
+        if (position < 1) throw new IllegalArgumentException("Invalid move position.");
         this.position = position;
     }
+
 }

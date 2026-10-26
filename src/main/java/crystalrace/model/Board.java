@@ -6,14 +6,12 @@
  */
 package crystalrace.model;
 
+import java.util.stream.IntStream;
+
 public class Board {
-    private final int totalCells;
+    private final int totalCells = 30;
 
-    public Board(int totalCells) {
-        this.totalCells = totalCells;
-    }
-
-    /* Method responsável pelo retorno do número total de casas*/
+    /* Responsável pelo retorno do número total de casas*/
     public int getTotalCells() {
         return totalCells;
     }
@@ -24,4 +22,7 @@ public class Board {
     public boolean isValidPosition(int position) {
         return position >= 1 && position <= totalCells;
     }
+
+
+
 }

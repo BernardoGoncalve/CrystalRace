@@ -5,7 +5,11 @@ Codex auxiliou a configuração Maven para Java 21, a adaptação do ponto de en
 
 O exemplo inicial do IntelliJ foi substituído por uma mensagem de arranque compatível com Java 21. O Main contém o método de entrada da aplicação; `static` permite à JVM executá-lo sem criar uma instância. Nesta etapa ainda não se demonstram encapsulamento ou composição.
 
-Identificações dos alunos: [por preencher]. Contribuições e revisões humanas efetivamente realizadas: [por preencher pelos próprios]. Não se atribui a estudantes a autoria do código gerado por IA. Não foram criados commits ou tags.
+Identificações dos alunos:
+    Bernardo Gonçalves - 30017311
+    Francisco Albuquerque - 30016911
+    Mauro de Campos - 30016638. 
+Contribuições e revisões humanas efetivamente realizadas: Bernardo Gonçalves. Não se atribui a estudantes a autoria do código gerado por IA. Não foram criados commits ou tags.
 
 O projeto de backup não foi consultado nem utilizado. Os resultados de validação desta etapa serão registados após execução real. Não existem testes de funcionalidades nesta etapa.
 
@@ -25,6 +29,6 @@ Implementação de `src/main/java/crystalrace/model/Player.java` assistida por C
 
 Conceitos: encapsulamento através de atributos privados; construtor para garantir um estado inicial válido; `final` no nome para impedir a sua reatribuição; métodos públicos de consulta. A posição é um atributo de instância, reservado para futura evolução das regras. Cada objeto tem o seu próprio estado. Não é necessária herança nesta etapa.
 
-Não foram implementadas Board, Game ou interface gráfica. Main e pom.xml foram preservados. Contribuições e revisão efetiva dos alunos: [por preencher pelos próprios].
+Não foram implementadas Board, Game ou interface gráfica. Main e pom.xml foram preservados. Contribuições e revisão efetiva dos alunos: Bernardo Gonçalves.
 
 Validação efetivamente executada por Codex: `mvn -o clean compile` com Java 21, BUILD SUCCESS (dois ficheiros de produção). Verificação programática temporária, executada com Java 21: nome válido, posição inicial 1, remoção de espaços exteriores, rejeição de null, vazio e espaços em branco, e criação de dois jogadores com nomes independentes. Resultado: PLAYER_CHECK_OK. O ficheiro auxiliar foi criado em target/ e removido após a execução. Não foram adicionados ou executados testes JUnit, nem atribuídas estas verificações a alunos. Não foram criados commits ou tags.
