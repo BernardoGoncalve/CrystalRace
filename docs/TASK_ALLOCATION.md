@@ -12,10 +12,10 @@ Os três devem implementar e testar Java substancial, compreender o todo e parti
 
 ## Aprovação e trabalho efetivo
 - Acordo dos três sobre a proposta: [por confirmar].
-- Trabalho humano já realizado por Bernardo: [detalhar ficheiros/métodos/testes e commits reais].
+- Trabalho humano já realizado por Bernardo: AdvanceCell, Board, Cell, Game, NormalCell, Player, ReturnCell, e TurnResult. A classe TurnResult foi realizado com a ajuda da AI juntamente como a integração e a realização da demonstração de movimentação.
 - Trabalho humano já realizado por Francisco: [preencher].
 - Trabalho humano já realizado por Mauro: [preencher].
-- Revisões realmente realizadas: [preencher].
+- Revisões realmente realizadas: Todas as classes levaram revisão humana, de forma a confirmar o correto funcionamento do código assistido por AI.
 - A integração, os novos testes e os documentos desta etapa foram assistidos por Codex. Não os atribuir automaticamente a estudantes; consultar AI_USE.md.
 
 ## Contagens na entrega final

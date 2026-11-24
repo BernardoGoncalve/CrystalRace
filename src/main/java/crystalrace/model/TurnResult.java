@@ -6,6 +6,6 @@
  */
 package crystalrace.model;
 
-public record TurnResult(String playerName, int diceValue, int previousPosition,
-                         int finalPosition, int turnNumber, boolean finished) {
+public record TurnResult(String playerName, int diceValue, int previousPosition, int landedPosition,
+                         int finalPosition, String effectDescription, int turnNumber, boolean finished) {
 }

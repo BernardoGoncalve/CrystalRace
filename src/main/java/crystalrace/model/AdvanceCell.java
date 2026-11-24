@@ -12,7 +12,9 @@ public class AdvanceCell extends Cell{
 
     public AdvanceCell(int number, int target) {
         super(number);
+        // Impede que a casa de destino seja fora do tabuleiro
         if (target < 1 || target > 30 || target <= number) throw new IllegalArgumentException("Destino Inválido.");
+        // Atribuição da casa como destino
         this.target = target;
     }
 
