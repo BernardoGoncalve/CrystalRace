@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c663896-2920-4838-becf-6748e4da3e40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/crystalrace/model/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DELIVERY_CHECKLIST.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DELIVERY_CHECKLIST.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/OCTOBER_STATUS.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/OCTOBER_STATUS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/TASK_ALLOCATION.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/TASK_ALLOCATION.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/crystalrace/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crystalrace/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/crystalrace/model/AdvanceCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crystalrace/model/AdvanceCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/crystalrace/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/crystalrace/model/Game.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/crystalrace/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000084084197932" />
+      <entry key="S5" value="1.05389590548294" />
+      <entry key="S10" value="1.5070825397412562" />
+      <entry key="S30" value="3.504444331033357" />
+      <entry key="S60" value="6.3628788145436985" />
+      <entry key="M2" value="12.435400425472887" />
+      <entry key="M5" value="26.94948635697155" />
+      <entry key="M10" value="41.77831102903406" />
+      <entry key="M15" value="50.01672539332012" />
+      <entry key="M30" value="61.042530373016284" />
+      <entry key="H1" value="67.94079754446098" />
+      <entry key="H2" value="71.81228800374086" />
+      <entry key="H4" value="73.86485821326625" />
+      <entry key="D1" value="75.63825298488993" />
+      <entry key="W1" value="75.94817552903594" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="2.9253903599383663E-144" />
+      <entry key="S5" value="4.734847913479032E-58" />
+      <entry key="S10" value="2.9120462722950467E-29" />
+      <entry key="S30" value="4.817477089816896E-10" />
+      <entry key="S60" value="3.098587698245411E-5" />
+      <entry key="M2" value="0.00786875548492611" />
+      <entry key="M5" value="0.21824011329158774" />
+      <entry key="M10" value="0.6606548776701683" />
+      <entry key="M15" value="0.955706920739846" />
+      <entry key="M30" value="1.3825362084688126" />
+      <entry key="H1" value="1.6628498771750837" />
+      <entry key="H2" value="1.8236498955703673" />
+      <entry key="H4" value="1.909790451413027" />
+      <entry key="D1" value="1.9846744593196026" />
+      <entry key="W1" value="1.9978034125786115" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.10511205190671434" />
+      <entry key="MS500" value="0.6372803136596311" />
+      <entry key="S2" value="0.8935350265046974" />
+      <entry key="S5" value="1.0027350514312414" />
+      <entry key="S10" value="1.4504085086297087" />
+      <entry key="S30" value="3.44067049333362" />
+      <entry key="S60" value="6.3033661318518615" />
+      <entry key="M2" value="12.387384814960166" />
+      <entry key="M5" value="27.122887958113182" />
+      <entry key="M10" value="42.40522116076643" />
+      <entry key="M15" value="50.945693203742" />
+      <entry key="M30" value="62.40883255074863" />
+      <entry key="H1" value="69.59462794785786" />
+      <entry key="H2" value="73.63117397813596" />
+      <entry key="H4" value="75.77219919564132" />
+      <entry key="D1" value="77.62250946697795" />
+      <entry key="W1" value="77.94591898745188" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="3LEEiFqT2wAXYgLywvBFTYJ56f2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/berna/OneDrive/UAL/2_ano/1_semestre/POO/Projeto/CrystalRace&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/berna/OneDrive/UAL/2_ano/1_semestre/POO/Projeto/CrystalRace/src/main/java/org/example/Main.java&quot;,
+    &quot;python.packages.toolwindow.project.migrated.to.right.top.v2&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c663896-2920-4838-becf-6748e4da3e40" name="Changes" comment="" />
+      <created>1793010955180</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793010955180</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

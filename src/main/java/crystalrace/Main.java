@@ -28,48 +28,58 @@ public class Main {
         do {
             game:
             {
-
                 System.out.println("Welcome to Crystal Race!");
-                System.out.print("Number of players: ");
-                numberOfPlayers = scanner.nextInt();
-                if (numberOfPlayers < 2 || numberOfPlayers > 4) {
-                    System.out.println("Only 2, 3 or 4 players are allowed");
-                } else {
+                numberOfPlayers = readIntInRange(scanner, "Number of players: ", 2, 4);
 
-                    for (int i = 0; i < numberOfPlayers; i++) {
-                        System.out.print("Enter player " + (i + 1) + " username: ");
-                        String username = scanner.next().trim();
-                        playersUsername.add(username.substring(0, 1).toUpperCase() + username.substring(1).toLowerCase());
-                    }
-                    //Criação do Objeto Game com os nomes dos players introduzidos
-                    Game game = new Game(playersUsername);
-                    //System.out.println("CRYSTAL RACE — protótipo de movimento de outubro");
-                    System.out.println("1 - Dados Automáticos | 2 - Dados Manuais");
-                    int diceOption = scanner.nextInt();
-                    if (diceOption > 2 || diceOption < 1) {
-                        System.out.println("Opção inválida");
-                        break game;
-                    }
-                    System.out.println("Sem modos de dado interativos nesta versão.");
-                    printBoard(game);
-                    System.out.println();
-                    do {
+                for (int i = 0; i < numberOfPlayers; i++) {
+                    System.out.print("Enter player " + (i + 1) + " username: ");
+                    String username = scanner.nextLine().trim();
+                    playersUsername.add(username.substring(0, 1).toUpperCase() + username.substring(1).toLowerCase());
+                }
+                //Criação do Objeto Game com os nomes dos players introduzidos
+                Game game = new Game(playersUsername);
+                //System.out.println("1 - Dados Automáticos | 2 - Dados Manuais");
+                int diceOption = readIntInRange(scanner, "1 - Dados Automáticos | 2 - Dados Manuais: ", 1, 2);
+                // int diceOption = scanner.nextInt();
+                // if (diceOption > 2 || diceOption < 1) {
+                //     System.out.println("Opção inválida");
+                //     break game;
+                // }
+                System.out.println("Sem modos de dado interativos nesta versão.");
+                printBoard(game);
+                System.out.println();
+                do {
 
-                        switch (diceOption) {
-                            case 1:
-                                RandomDice dice = new RandomDice();
-                                roll = dice.roll();
-                                play(game, roll);
-                                break;
-                            case 2:
+                    switch (diceOption) {
+                        case 1:
+                            RandomDice dice = new RandomDice();
+                            roll = dice.roll();
+                            play(game, roll);
+                            break;
+                        case 2:
+                            do {
                                 System.out.println("Jogador: " + game.getCurrentPlayer().getName());
                                 System.out.println("Enter dice value: ");
+
+                                if (!scanner.hasNextInt()) {
+                                    System.out.println("O dado deve ser um número inteiro!");
+                                    scanner.next();
+                                    roll = 0;
+                                    continue;
+                                }
+
                                 roll = scanner.nextInt();
-                                play(game, roll);
-                                break;
-                        }
-                    } while (!game.isFinished());
-                }
+
+                                if (roll < 1 || roll > 6) {
+                                    System.out.println("O dado deve estar entre 1 e 6!");
+                                }
+
+                            } while (roll < 1 || roll > 6);
+
+                            play(game, roll);
+                            break;
+                    }
+                } while (!game.isFinished());
             }
             System.out.print("Would you like to play again? (y/n): ");
             option = scanner.next().trim().toLowerCase(Locale.ROOT);
@@ -118,5 +128,28 @@ public class Main {
                 .map(player -> player.getName() + "=" + player.getPosition())
                 .collect(Collectors.joining(" | "));
         System.out.println(positions);
+    }
+
+    private static int readIntInRange(Scanner scanner, String message, int min, int max){
+        int value;
+        while(true) {
+            System.out.println(message);
+
+            if(!scanner.hasNextInt()) {
+                System.out.println("Introduza um número inteiro!");
+                scanner.nextLine();
+                continue;
+            }
+
+            value = scanner.nextInt();
+            scanner.nextLine();
+
+            if (value < min || value > max) {
+                System.out.printf("O valor deve estar entre %d e %d!\n", min, max);
+                continue;
+            }
+
+            return value;
+        }
     }
 }
